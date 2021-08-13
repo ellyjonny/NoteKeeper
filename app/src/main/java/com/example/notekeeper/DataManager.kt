@@ -1,10 +1,11 @@
 package com.example.notekeeper
 
-class DataManager {
+object DataManager {
     val courses = HashMap<String,CourseInfo>()
     val notes = ArrayList<NoteInfo>()
 
     init {
+        initializeNotes()
         initializeCourses()
     }
 
@@ -22,4 +23,8 @@ class DataManager {
         course = CourseInfo( "android_kotlin", "Android Programming with Kotlin")
        courses.set(course.courseId, course)
    }
+
+    private  fun initializeNotes(){
+
+    }
 }
